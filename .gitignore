@@ -6,8 +6,18 @@
 /*.rbxl.lock
 /*.rbxlx.lock
 
+# Wally lockfile
+wally.lock
+
+# Wally packages
+Packages
+ServerPackages
+
+# Rojo
+rojo*.exe
+sourcemap.json
+
 # Miscellaneous
-*.exe
 *.tsbuildinfo
 *.zip
 /.agf

@@ -1,0 +1,45 @@
+name: Releases
+
+on: push
+
+jobs:
+    deploy:
+        if: ${{ github.ref == 'refs/heads/main' }}
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Main
+              uses: actions/checkout@v4
+
+            - name: Setup Aftman
+              uses: ok-nick/setup-aftman@v0.4.2
+
+            - name: Install Aftman Toolchains
+              run: aftman install
+
+            - name: Install Dependencies
+              run: wally install
+
+            - name: Create Packages Directory
+              run: mkdir -p Packages
+
+    development:
+        if: ${{ github.ref != 'refs/heads/main' }}
+        runs-on: ubuntu-latest
+
+        # For now it is the same
+        steps:
+            - name: Checkout development
+              uses: actions/checkout@v4
+
+            - name: Setup Aftman
+              uses: ok-nick/setup-aftman@v0.4.2
+
+            - name: Install Aftman Toolchains
+              run: aftman install
+
+            - name: Install Dependencies
+              run: wally install
+
+            - name: Create Packages Directory
+              run: mkdir -p Packages
