@@ -1,0 +1,56 @@
+{
+	"name": "mxtn-template",
+	"version": "1.0.0",
+	"private": true,
+	"license": "SEE LICENSE IN LICENSE.md",
+	"author": {
+		"name": "MixeroTN",
+		"url": "https://github.com/MixeroTN"
+	},
+	"contributors": [],
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "2.2.0-types.0",
+		"@rbxts/types": "^1.0.754",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"eslint-plugin-roblox-ts": "^0.0.36",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"eslint-plugin-unused-imports": "^3.1.0",
+		"prettier": "^3.2.5",
+		"roblox-ts": "2.3.0-dev-eb0ff9c",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@quenty/softshutdown": "^3.27.0",
+		"@rbxts/bezier": "^0.2.0",
+		"@rbxts/log": "^0.6.3",
+		"@rbxts/matter": "^0.6.2-ts.6",
+		"@rbxts/matter-hooks": "^0.1.1",
+		"@rbxts/plasma": "^0.4.1-ts.1",
+		"@rbxts/pretty-react-hooks": "^0.4.1",
+		"@rbxts/profileservice": "^1.4.1",
+		"@rbxts/promise-character": "^1.0.3",
+		"@rbxts/rbxts-hashlib": "^1.0.1",
+		"@rbxts/rbxts-pattern": "^1.0.2",
+		"@rbxts/react": "^0.1.0",
+		"@rbxts/react-roblox": "^0.3.0",
+		"@rbxts/replicaservice": "^1.1.0-ts.2",
+		"@rbxts/rewire": "^0.3.0",
+		"@rbxts/ripple": "^0.7.1",
+		"@rbxts/rust-classes": "^0.12.0",
+		"@rbxts/services": "^1.5.4",
+		"@rbxts/t": "^3.1.0",
+		"@rbxts/validate-tree": "^2.0.2",
+		"@rbxts/variant": "^1.0.2",
+		"@rbxts/wind-shake": "^1.0.0",
+		"@rbxts/zircon": "^1.0.9",
+		"rbxts-transform-debug": "^2.1.0-beta.0"
+	}
+}
