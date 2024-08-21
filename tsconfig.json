@@ -19,7 +19,7 @@
 		// Configurable.
 		"rootDir": "src",
 		"outDir": "out",
-		"baseUrl": "./",
+		"baseUrl": "src",
 		"paths": {
 			"@/types/*": ["types/*"],
 			"@/*": ["src/*"]
