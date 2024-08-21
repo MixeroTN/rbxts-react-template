@@ -15,13 +15,26 @@
 		"moduleDetection": "force",
 		"strict": true,
 		"target": "ESNext",
-		"typeRoots": ["node_modules/@rbxts"],
-
-		// configurable
+		"typeRoots": ["node_modules/@rbxts", "./@types"],
+		// Configurable.
 		"rootDir": "src",
 		"outDir": "out",
-		"baseUrl": "src",
+		"baseUrl": "./",
+		"paths": {
+			"@/types/*": ["types/*"],
+			"@/*": ["src/*"]
+		},
 		"incremental": true,
+		"plugins": [
+			{
+				"transform": "rbxts-transform-debug",
+				"enabled": true,
+				"verbose": true,
+				"environmentRequires": {
+					//"NODE_ENV": "development"
+				}
+			}
+		],
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo"
 	}
 }
