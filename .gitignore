@@ -21,9 +21,10 @@ sourcemap.json
 *.tsbuildinfo
 *.zip
 /.agf
-/.vscode
+#/.vscode
 /build
-/include
+#/include
+/new-game
 /out
 .DS_Store
 node_modules

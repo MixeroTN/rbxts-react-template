@@ -43,7 +43,7 @@
 		"@rbxts/matter": "^0.8.5",
 		"@rbxts/matter-hooks": "^0.1.2",
 		"@rbxts/plasma": "^0.4.5",
-		"@rbxts/player-hooks": "^1.0.0-beta.1",
+		"@rbxts/player-hooks": "^1.0.1-beta.0",
 		"@rbxts/pretty-react-hooks": "^0.6.0",
 		"@rbxts/profileservice": "^1.4.2",
 		"@rbxts/promise-character": "^1.0.3",
