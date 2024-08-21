@@ -1,47 +1,37 @@
 {
 	"name": "mxtn-template",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
 	"tree": {
 		"$className": "DataModel",
-		"ReplicatedFirst": {
-			"$className": "ReplicatedFirst",
-			"$path": "src/client/first"
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"TS": {
+				"$path": "out/server"
+			}
 		},
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
-			"package": {
-				"$className": "Folder",
-				"$path": "Packages"
+			"rbxts_include": {
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					}
+				}
 			},
-			"shared": {
-				"$className": "Folder",
-				"$path": "src/shared"
-			},
-			"client": {
-				"$className": "Folder",
-				"$path": "src/client/module"
-			}
-		},
-		"ServerScriptService": {
-			"$className": "ServerScriptService",
-			"server": {
-				"$className": "Folder",
-				"$path": "src/server"
-			},
-			"server_package": {
-				"$className": "Folder",
-				"$path": "ServerPackages"
+			"TS": {
+				"$path": "out/shared"
 			}
 		},
 		"StarterPlayer": {
 			"$className": "StarterPlayer",
 			"StarterPlayerScripts": {
 				"$className": "StarterPlayerScripts",
-				"$path": "src/client/init"
+				"TS": {
+					"$path": "out/client"
+				}
 			}
-		},
-		"LocalizationService": {
-			"$className": "LocalizationService",
-			"$path": "src/locale"
 		}
 	}
 }
