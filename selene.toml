@@ -1,0 +1,16 @@
+std = "roblox"
+
+[lints]
+global_usage = "deny"
+depreceated = "warn"
+constant_table_comparsion = "warn"
+must_use = "warn"
+type_check_inside_call = "deny"
+unbalanced_assignments = "deny"
+high_cyclomatic_complexity = "warn"
+mixed_table = "warn"
+multiple_statements = "warn"
+duplicate_keys = "deny"
+empty_if = "deny"
+unused_variable = "deny"
+roblox_incorrect_color3_new_bounds = "deny"

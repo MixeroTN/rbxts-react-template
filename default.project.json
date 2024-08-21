@@ -1,0 +1,47 @@
+{
+	"name": "mxtn-template",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedFirst": {
+			"$className": "ReplicatedFirst",
+			"$path": "src/client/first"
+		},
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"package": {
+				"$className": "Folder",
+				"$path": "Packages"
+			},
+			"shared": {
+				"$className": "Folder",
+				"$path": "src/shared"
+			},
+			"client": {
+				"$className": "Folder",
+				"$path": "src/client/module"
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"server": {
+				"$className": "Folder",
+				"$path": "src/server"
+			},
+			"server_package": {
+				"$className": "Folder",
+				"$path": "ServerPackages"
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"$path": "src/client/init"
+			}
+		},
+		"LocalizationService": {
+			"$className": "LocalizationService",
+			"$path": "src/locale"
+		}
+	}
+}
