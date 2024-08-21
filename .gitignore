@@ -1,6 +1,23 @@
-/node_modules
-/out
-/include
+# Project place files
+/.rbxl
+/.rbxlx
+
+# Roblox Studio lock files
+/*.rbxl.lock
+/*.rbxlx.lock
+
+# Miscellaneous
+*.exe
 *.tsbuildinfo
-yarn-error.log
+*.zip
+/.agf
+/.vscode
+/build
+/include
+/out
 .DS_Store
+node_modules
+package*
+packages
+packages/*/Packages
+yarn-error.log
