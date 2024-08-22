@@ -33,6 +33,10 @@
 				"environmentRequires": {
 					//"NODE_ENV": "development"
 				}
+			},
+			{
+				"transform": "rbxts-transform-env",
+				"defaultEnvironment": "canary"
 			}
 		],
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo"

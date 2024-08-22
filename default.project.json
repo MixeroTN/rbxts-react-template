@@ -1,5 +1,5 @@
 {
-	"name": "mxtn-template",
+	"name": "rbx-react-ts-template",
 	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
 	"tree": {
 		"$className": "DataModel",

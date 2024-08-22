@@ -1,5 +1,5 @@
 {
-	"name": "mxtn-template",
+	"name": "rbx-react-ts-template",
 	"version": "1.0.0",
 	"private": true,
 	"license": "SEE LICENSE IN LICENSE.md",
@@ -12,7 +12,8 @@
 		"build": "rbxtsc",
 		"watch": "rbxtsc -w",
 		"serve": "rojo serve",
-		"build:dev": "rm -rf out && npm run build && rojo build --output place.rbxlx"
+		"build:dev": "rm -rf out && npm run build && rojo build --output place.rbxlx",
+		"build:prod": "rm -rf out && cross-env NODE_ENV=production npm run build && rojo build --output place.rbxlx"
 	},
 	"devDependencies": {
 		"@facilitative/github-label-presets": "^1.0.2",
@@ -36,6 +37,7 @@
 	"dependencies": {
 		"@quenty/softshutdown": "^9.7.0",
 		"@rbxts/bezier": "^0.2.0",
+		"@rbxts/bitbuffer2": "^1.0.0-ts.0",
 		"@rbxts/bytenet": "^0.4.3-tsprev4",
 		"@rbxts/camera-shaker": "^1.0.8",
 		"@rbxts/catppuccin": "^1.0.2",

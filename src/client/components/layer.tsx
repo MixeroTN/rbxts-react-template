@@ -1,5 +1,5 @@
 import React from "@rbxts/react";
-import { IS_PLUGIN } from "shared/configs/constants";
+import { IS_PLUGIN } from "shared/configs/core";
 
 interface LayerProps {
 	displayOrder?: number;

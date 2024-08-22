@@ -16,6 +16,7 @@
 	"eslint.run": "onType",
 	"eslint.format.enable": true,
 	"cSpell.words": [
+		"bitbuffer",
 		"getmetatable",
 		"hoarcekat",
 		"rbxassetid",
