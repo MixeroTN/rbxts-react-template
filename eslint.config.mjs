@@ -1,5 +1,4 @@
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import typescriptEslintNaming from "@typescript-eslint/naming-convection"
 import robloxTs from "eslint-plugin-roblox-ts";
 import prettier from "eslint-plugin-prettier";
 import unusedImports from "eslint-plugin-unused-imports";
@@ -57,32 +56,5 @@ export default [{
         "simple-import-sort/exports": "warn",
         "simple-import-sort/imports": "warn",
         "unused-imports/no-unused-imports": "warn",
-
-        "@typescript-eslint/naming-convention": [
-            "error",
-            {
-                "selector": "default",
-                "format": ["camelCase"],
-            },
-            {
-                "selector": "variable",
-                "format": ["camelCase", "UPPER_CASE"],
-            },
-            {
-                "selector": "parameter",
-                "format": ["camelCase"],
-                "leadingUnderscore": "allow",
-            },
-            {
-                "selector": "memberLike",
-                "modifiers": ["private"],
-                "format": ["camelCase"],
-                //   "leadingUnderscore": "require",
-            },
-            {
-                "selector": "typeLike",
-                "format": ["PascalCase"],
-            },
-        ],
     },
 }];
