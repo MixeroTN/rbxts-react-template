@@ -12,7 +12,7 @@
 		"build": "rbxtsc",
 		"watch": "rbxtsc -w",
 		"serve": "rojo serve",
-		"build:dev": "rm -rf out && yarn compile && rojo build --output place.rbxlx"
+		"build:dev": "rm -rf out && npm run build && rojo build --output place.rbxlx"
 	},
 	"devDependencies": {
 		"@facilitative/github-label-presets": "^1.0.2",
