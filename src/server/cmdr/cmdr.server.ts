@@ -1,4 +1,4 @@
-import { Cmdr, CommandContext } from "@rbxts/cmdr";
+import { Cmdr } from "@rbxts/cmdr";
 
 const parent = <Folder>script.Parent;
 

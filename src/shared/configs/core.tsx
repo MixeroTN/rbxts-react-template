@@ -1,6 +1,9 @@
 import { Players, RunService } from "@rbxts/services";
 import { $NODE_ENV } from "rbxts-transform-env";
 
+export const ADMIN_RANK: number = 4;
+export const GROUP_ID: number = 4454344;
+
 export const IS_PLUGIN = RunService.IsStudio() && !RunService.IsRunning();
 export const IS_CANARY = $NODE_ENV === "canary";
 export const IS_PROD = $NODE_ENV === "production";

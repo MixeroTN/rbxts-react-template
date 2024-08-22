@@ -1,11 +1,11 @@
 import { CommandContext, Registry } from "@rbxts/cmdr";
+import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
 
 // https://eryn.io/Cmdr/guide/Hooks.html
 // At least one BeforeRun hook is required to make commands work in the live game
 // To disable this, comment "RegisterHooksIn" line in cmdr server script
 
-const ADMIN_RANK: number = 4;
-const GROUP_ID: number = 4454344;
+
 const TIMEOUT: number = 30;
 
 interface CacheEntry {
