@@ -25,6 +25,7 @@
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-unused-imports": "^4.1.3",
 		"prettier": "^3.3.3",
+		"rbxts-transform-debug": "^2.2.0",
 		"roblox-ts": "2.3.0-dev-3a5b920",
 		"typescript": "^5.5.4"
 	},
@@ -42,6 +43,7 @@
 		"@rbxts/maid": "^1.1.0",
 		"@rbxts/matter": "^0.8.5",
 		"@rbxts/matter-hooks": "^0.1.2",
+		"@rbxts/object-utils": "^1.0.4",
 		"@rbxts/plasma": "^0.4.5",
 		"@rbxts/player-hooks": "^1.0.1-beta.0",
 		"@rbxts/pretty-react-hooks": "^0.6.0",
@@ -69,7 +71,6 @@
 		"@rbxts/validate-tree": "^2.0.2",
 		"@rbxts/variant": "^1.0.2",
 		"@rbxts/wind-shake": "^1.0.0",
-		"@rbxts/zircon": "^1.0.9",
-		"rbxts-transform-debug": "^2.2.0"
+		"@rbxts/zircon": "^1.0.9"
 	}
 }
