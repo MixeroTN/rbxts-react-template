@@ -21,6 +21,7 @@
 		"rbxts",
 		"rbxtsc",
 		"screengui",
-		"setmetatable"
+		"setmetatable",
+		"tsbuildinfo"
 	]
 }
