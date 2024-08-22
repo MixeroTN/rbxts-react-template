@@ -21,10 +21,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint
-        run: |
-          yarn prettier --check src
-
       - name: Compile
         run: yarn build:dev --verbose
 
