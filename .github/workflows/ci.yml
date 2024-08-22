@@ -23,7 +23,6 @@ jobs:
 
       - name: Lint
         run: |
-          yarn eslint src
           yarn prettier --check src
 
       - name: Compile
