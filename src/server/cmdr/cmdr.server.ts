@@ -1,8 +1,8 @@
-import { Cmdr } from "@rbxts/cmdr";
+import { Cmdr, CommandContext } from "@rbxts/cmdr";
 
 const parent = <Folder>script.Parent;
 
 Cmdr.RegisterDefaultCommands();
-Cmdr.RegisterCommandsIn( <Folder>parent.FindFirstChild( "commands" ) );
-//Cmdr.RegisterHooksIn( <Folder>parent.FindFirstChild( "hooks" ) );
+Cmdr.RegisterCommandsIn( <Folder>parent.WaitForChild( "commands" ) );
+Cmdr.RegisterHooksIn( <Folder>parent.WaitForChild( "hooks" ) );
 Cmdr.RegisterTypesIn( <Folder>parent.FindFirstChild( "types" ) );
