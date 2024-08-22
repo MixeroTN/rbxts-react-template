@@ -23,8 +23,7 @@ sourcemap.json
 /.agf
 #/.vscode
 /build
-#/include
-/new-game
+/include
 /out
 .DS_Store
 node_modules
