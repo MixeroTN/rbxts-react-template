@@ -18,14 +18,16 @@ rojo*.exe
 sourcemap.json
 
 # Miscellaneous
-*.tsbuildinfo
-*.zip
 /.agf
+*.tsbuildinfo
 #/.vscode
+*.zip
 /build
 /include
 /out
 .DS_Store
+.env
+mantle-output.json
 node_modules
 package*
 packages

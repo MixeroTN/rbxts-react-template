@@ -5,5 +5,5 @@ local TestEZ = require(ReplicatedStorage.rbxts_include.node_modules["@rbxts"].te
 
 TestEZ.TestBootstrap:run({
     ServerScriptService.TS.test,
-    -- ReplicatedStorage.TS.test,
+    ReplicatedStorage.TS.test,
 }, TestEZ.Reporters.TextReporter)
