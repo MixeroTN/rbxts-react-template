@@ -58,7 +58,7 @@ const initialize = () => {
 	_render()
 		.andThen(_start, warn)
 		.finally(() => {
-			print(`The server took ${os.clock() - beginTime} [to format] seconds to initialize.`);
+			print(`The client took ${os.clock() - beginTime} [to format] seconds to initialize.`);
 
 			const reloader = new HotReloader();
 			reloader.scan(
