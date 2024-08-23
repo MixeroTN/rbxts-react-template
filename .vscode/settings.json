@@ -1,15 +1,16 @@
 {
 	"editor.formatOnSave": true,
   	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"explorer.compactFolders": false,
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"files.eol": "\n",
 	"[typescript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": true
 	},
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		//"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": true
 	},
@@ -17,6 +18,7 @@
 	"eslint.format.enable": true,
 	"cSpell.words": [
 		"bitbuffer",
+		"boatbomber",
 		"desaturate",
 		"getmetatable",
 		"hoarcekat",
@@ -24,6 +26,7 @@
 		"rbxts",
 		"rbxtsc",
 		"screengui",
+		"setmemorycategory",
 		"setmetatable",
 		"testez",
 		"tsbuildinfo"

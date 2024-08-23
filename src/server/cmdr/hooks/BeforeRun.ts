@@ -5,45 +5,45 @@ import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
 // At least one BeforeRun hook is required to make commands work in the live game
 // To disable this, comment "RegisterHooksIn" line in cmdr server script
 
-
 const TIMEOUT: number = 30;
 
 interface CacheEntry {
-    rank: number;
-    timestamp: number;
+	rank: number;
+	timestamp: number;
 }
 
 const cache: Map<number, CacheEntry> = new Map();
 
 function checkRank(player: Player): number {
-    const rank: number = player.GetRankInGroup(GROUP_ID);
-    const userId: number = player.UserId;
+	const rank: number = player.GetRankInGroup(GROUP_ID);
+	const userId: number = player.UserId;
 
-    const currentTime: number = os.time();
-    const cacheEntry: CacheEntry | undefined = cache.get(userId);
+	const currentTime: number = os.time();
+	const cacheEntry: CacheEntry | undefined = cache.get(userId);
 
-    if (cacheEntry && currentTime - cacheEntry.timestamp < TIMEOUT) {
-        return cacheEntry.rank;
-    }
+	if (cacheEntry && currentTime - cacheEntry.timestamp < TIMEOUT) {
+		return cacheEntry.rank;
+	}
 
-    cache.set(player.UserId, {
-        rank, timestamp: currentTime
-    });
+	cache.set(player.UserId, {
+		rank,
+		timestamp: currentTime,
+	});
 
-    return rank;
+	return rank;
 }
 
 function adminPermissionCheck(player: Player): boolean {
-    return checkRank(player) >= ADMIN_RANK;
+	return checkRank(player) >= ADMIN_RANK;
 }
 
-export = ( registry: Registry ) => {
-    registry.RegisterHook("BeforeRun", (context: CommandContext): string | undefined => {
-        if (
-            !(context.Group === "Admin" || context.Group === "DefaultAdmin") ||
-            !adminPermissionCheck(context.Executor)
-        ) {
-            return "You don't have permission to run this command";
-        }
-    });
+export = (registry: Registry) => {
+	registry.RegisterHook("BeforeRun", (context: CommandContext): string | undefined => {
+		if (
+			!(context.Group === "Admin" || context.Group === "DefaultAdmin") ||
+			!adminPermissionCheck(context.Executor)
+		) {
+			return "You don't have permission to run this command";
+		}
+	});
 };

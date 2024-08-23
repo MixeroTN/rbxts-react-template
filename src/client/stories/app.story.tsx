@@ -5,5 +5,5 @@ import React from "@rbxts/react";
 import { App } from "client/components/app";
 
 export = hoarcekat(() => {
-    return <App />;
+	return <App />;
 });
