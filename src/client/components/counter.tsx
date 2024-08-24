@@ -4,6 +4,8 @@ import { fonts } from "client/utils/fonts";
 import { palette } from "client/utils/palette";
 
 import { Button } from "./button";
+import { clientSignals } from "client/client-signals";
+import { clientData } from "./client-data";
 
 const COLORS = [palette.purple, palette.blue, palette.green, palette.yellow, palette.red];
 
@@ -17,6 +19,7 @@ export function Counter() {
 			onClick={() => {
 				setCount(count + 1);
 				setColorIndex((colorIndex + 1) % COLORS.size());
+				clientData.serverProducer?.removeUIVisible("essa xddddddddddddd")
 			}}
 			font={fonts.inter.medium}
 			text={`👆 Clicked ${count} times`}
