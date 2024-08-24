@@ -5,8 +5,9 @@ import { createPortal, createRoot } from "@rbxts/react-roblox";
 import { Players } from "@rbxts/services";
 
 import { App } from "./components/app";
+import { MainMenu } from "./components/base/main-menu";
 
 const root = createRoot(new Instance("Folder"));
-const target = Players.LocalPlayer.WaitForChild("PlayerGui");
+const target = Players.LocalPlayer.WaitForChild("PlayerGui").WaitForChild("ReactRender");
 
-root.render(<StrictMode>{createPortal(<App />, target)}</StrictMode>);
+root.render(createPortal(<MainMenu />, target));

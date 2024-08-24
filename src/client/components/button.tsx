@@ -44,17 +44,17 @@ export function Button({
 			buttonPositionMotion.spring(px(8), springs.responsive);
 			buttonColorMotion.spring(brighten(backgroundColor, -0.1), springs.responsive);
 		} else if (hovered) {
-			buttonPositionMotion.spring(-px(8), springs.responsive);
+			buttonPositionMotion.spring(px(8), springs.gentle);
 			buttonColorMotion.spring(brighten(backgroundColor, 0.1), springs.responsive);
 		} else {
-			buttonPositionMotion.spring(0, springs.responsive);
+			buttonPositionMotion.spring(0, springs.gentle);
 			buttonColorMotion.spring(backgroundColor, springs.responsive);
 		}
 	}, [pressed, hovered, backgroundColor, px]);
 
 	useEffect(() => {
 		if (!pressed && hovered) {
-			buttonPositionMotion.impulse(-px(1));
+			//buttonPositionMotion.impulse(px(1));
 			buttonPositionMotion.spring(-px(8), springs.bubbly);
 		}
 	}, [pressed]);
