@@ -1,20 +1,19 @@
 import "./dev";
 
+import { promiseChild } from "@rbxts/promise-child";
 import React, { StrictMode } from "@rbxts/react";
 import { createPortal, createRoot } from "@rbxts/react-roblox";
-import { Players } from "@rbxts/services";
-import { Cleanser } from "@rbxts/cleanser";
 import { HotReloader } from "@rbxts/rewire";
-import { promiseChild } from "@rbxts/promise-child";
+import { Players } from "@rbxts/services";
 
 import { App } from "./components/app";
 
-export type BaseModule = {
-	initialize: () => [...any];
-	start: () => [...any];
-};
+export interface BaseModule {
+	initialize: () => [...args: Array<unknown>];
+	start: () => [...args: Array<unknown>];
+}
 
-const Player = Players.LocalPlayer as Player;
+const Player = Players.LocalPlayer;
 const PlayerGui = Player.WaitForChild("PlayerGui") as PlayerGui;
 const PlayerScripts = Player.WaitForChild("PlayerScripts") as PlayerScripts;
 
@@ -67,9 +66,10 @@ const initialize = () => {
 					require(module);
 					print("Reloading module", module.Name);
 				},
-				module => {},
+				_module => {},
 			);
-		});
+		})
+		.catch(warn);
 };
 
 initialize();

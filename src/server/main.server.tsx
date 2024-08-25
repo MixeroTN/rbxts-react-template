@@ -1,11 +1,11 @@
-import { ServerScriptService } from "@rbxts/services";
-import { HotReloader } from "@rbxts/rewire";
 import { promiseChild } from "@rbxts/promise-child";
+import { HotReloader } from "@rbxts/rewire";
+import { ServerScriptService } from "@rbxts/services";
 
-export type BaseModule = {
-	initialize: () => [...any];
-	start: () => [...any];
-};
+export interface BaseModule {
+	initialize: () => [...args: Array<unknown>];
+	start: () => [...args: Array<unknown>];
+}
 
 const initialize = () => {
 	const beginTime: number = os.clock();
@@ -46,7 +46,7 @@ const initialize = () => {
 					require(module);
 					print("Reloading module", module.Name);
 				},
-				module => {},
+				_module => {},
 			);
 		});
 };

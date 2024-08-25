@@ -4,7 +4,6 @@ import { fonts } from "client/utils/fonts";
 import { palette } from "client/utils/palette";
 
 import { Button } from "./button";
-import { clientSignals } from "client/client-signals";
 import { clientData } from "./client-data";
 
 const COLORS = [palette.purple, palette.blue, palette.green, palette.yellow, palette.red];

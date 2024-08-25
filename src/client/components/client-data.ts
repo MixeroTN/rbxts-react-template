@@ -6,4 +6,4 @@ export interface StoredDataOnClient {
 	serverProducer?: ServerProducer;
 }
 
-//export let clientData: StoredDataOnClient = {};
+export const clientData: StoredDataOnClient = {};

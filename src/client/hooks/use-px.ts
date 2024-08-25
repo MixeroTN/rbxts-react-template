@@ -5,23 +5,23 @@ interface ScaleFunction {
 	/**
 	 * Scales `pixels` based on the current viewport size and rounds the result.
 	 */
-	(pixels: number): number;
+	(_pixels: number): number;
 	/**
 	 * Scales `pixels` and rounds the result to the nearest even number.
 	 */
-	even: (pixels: number) => number;
+	even: (_pixels: number) => number;
 	/**
 	 * Scales a number based on the current viewport size without rounding.
 	 */
-	scale: (percent: number) => number;
+	scale: (_percent: number) => number;
 	/**
 	 * Scales `pixels` and rounds the result down.
 	 */
-	floor: (pixels: number) => number;
+	floor: (_pixels: number) => number;
 	/**
 	 * Scales `pixels` and rounds the result up.
 	 */
-	ceil: (pixels: number) => number;
+	ceil: (_pixels: number) => number;
 }
 
 const BASE_RESOLUTION = new Vector2(1280, 832);

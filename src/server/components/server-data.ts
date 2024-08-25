@@ -45,7 +45,7 @@ remotes.replicateActionS.connect((player, actionName, actionArgs) => {
 	}
 
 	isActionReplicated = true;
-	(profile.getDispatchers() as Record<string, (...args: Array<unknown>) => unknown>)[actionName](...actionArgs);
+	(profile.getDispatchers() as Record<string, (..._args: Array<unknown>) => unknown>)[actionName](...actionArgs);
 });
 
 export class serverData {

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // This comes directly from LITTENSY's Slither repo https://github.com/littensy/slither/blob/b6c62f0b9347461697732b8dc6529ae398d6e438/src/shared/utils/object-utils.ts
 
 /**

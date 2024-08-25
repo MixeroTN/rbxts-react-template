@@ -38,7 +38,7 @@ remotes.replicateAction.connect((actionName, actionArgs) => {
 	}
 
 	isActionReplicated = true;
-	(clientData.serverProducer?.getDispatchers() as Record<string, (...args: Array<unknown>) => unknown>)[actionName](
+	(clientData.serverProducer?.getDispatchers() as Record<string, (..._args: Array<unknown>) => unknown>)[actionName](
 		...actionArgs,
 	);
 	print(clientData.serverProducer?.getState());
