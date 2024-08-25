@@ -25,7 +25,7 @@ export const createServerProducer = (defaultState: serverProfileState) => {
 
 		removeUIVisible: (state, todo: string) => ({
 			...state,
-			uiVisible: state.uiVisible.filter((t) => t !== todo),
+			uiVisible: state.uiVisible.filter(t => t !== todo),
 		}),
 	});
 };

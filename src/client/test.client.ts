@@ -7,7 +7,7 @@ import { ProducerMiddleware } from "@rbxts/reflex";
 
 let isActionReplicated = false;
 
-const middleware: ProducerMiddleware = (producer) => {
+const middleware: ProducerMiddleware = producer => {
 	return (nextAction, name) => {
 		return (...args) => {
 			const state = producer.getState() as serverProfileState;
@@ -44,7 +44,7 @@ remotes.replicateAction.connect((actionName, actionArgs) => {
 	print(clientData.serverProducer?.getState());
 });
 
-remotes.createClientData.connect((initData) => {
+remotes.createClientData.connect(initData => {
 	clientData["clientProducer"] = clientStore;
 	clientData["serverProducer"] = createServerProducer(initData);
 	clientData["serverProducer"].applyMiddleware(middleware);

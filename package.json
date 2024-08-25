@@ -1,29 +1,34 @@
 {
 	"name": "rbx-react-ts-template",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"private": true,
 	"license": "SEE LICENSE IN LICENSE.md",
-	"author": {
-		"name": "MixeroTN",
-		"url": "https://github.com/MixeroTN"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MixeroTN/rbxts-react-template.git"
 	},
+	"author": "",
 	"contributors": [],
 	"scripts": {
 		"build": "rbxtsc",
-		"watch": "rbxtsc -w",
-		"serve": "rojo serve",
 		"build:dev": "rm -rf out && npm run build && rojo build --output place.rbxlx",
-		"build:prod": "rm -rf out && cross-env NODE_ENV=production npm run build && rojo build --output place.rbxlx"
+		"build:prod": "rm -rf out && cross-env NODE_ENV=production npm run build && rojo build --output place.rbxlx",
+		"eslint": "eslint \"src/**/*.ts\" --max-warnings 0",
+		"watch": "rbxtsc -w",
+		"serve": "rojo serve"
 	},
 	"devDependencies": {
 		"@facilitative/github-label-presets": "^1.0.2",
 		"@rbxts/compiler-types": "2.3.0-types.2",
 		"@rbxts/types": "^1.0.801",
+		"@types/fs-extra": "^11.0.4",
 		"@typescript-eslint/eslint-plugin": "^8.2.0",
 		"@typescript-eslint/parser": "^8.2.0",
 		"cross-env": "^7.0.3",
-		"eslint": "^9.9.1",
+		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-deprecation": "^3.0.0",
+		"eslint-plugin-no-autofix": "^2.0.0",
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-roblox-ts": "^0.0.36",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
@@ -32,7 +37,9 @@
 		"rbxts-transform-debug": "^2.2.0",
 		"rbxts-transform-env": "^2.2.0",
 		"roblox-ts": "2.3.0-dev-3a5b920",
-		"typescript": "^5.5.4"
+		"ts-patch": "^3.2.1",
+		"typescript": "^5.5.4",
+		"typescript-transform-paths": "^3.4.7"
 	},
 	"dependencies": {
 		"@quenty/softshutdown": "^9.7.0",

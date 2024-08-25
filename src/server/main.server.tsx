@@ -14,7 +14,7 @@ const initialize = () => {
 	const services = promiseChild(TSFolder, "services").expect() as Folder;
 
 	const _start = () =>
-		Promise.defer<void>((_resolve) => {
+		Promise.defer<void>(_resolve => {
 			for (const service of services.GetDescendants()) {
 				if (!service.IsA("ModuleScript")) continue;
 
@@ -42,11 +42,11 @@ const initialize = () => {
 			const reloader = new HotReloader();
 			reloader.scan(
 				services,
-				(module) => {
+				module => {
 					require(module);
 					print("Reloading module", module.Name);
 				},
-				(module) => {},
+				module => {},
 			);
 		});
 };

@@ -17,7 +17,7 @@ export const getPlayerServerData = (player: Player): serverData => {
 
 let isActionReplicated = false;
 
-const middleware: ProducerMiddleware = (producer) => {
+const middleware: ProducerMiddleware = producer => {
 	return (nextAction, name) => {
 		return (...args) => {
 			const state = producer.getState() as serverProfileState;

@@ -1,8 +1,6 @@
 interface Benchmark<T> {
 	readonly parameters?: () => T;
-	readonly functions: {
-		readonly [key: string]: (profiler: BenchmarkProfiler, parameters: T) => void;
-	};
+	readonly functions: Readonly<Record<string, (profiler: BenchmarkProfiler, parameters: T) => void>>;
 }
 
 export interface BenchmarkProfiler {

@@ -16,6 +16,6 @@ export const uiStore = createProducer(defaultState, {
 
 	removeUIVisible: (state, todo: string) => ({
 		...state,
-		uiVisible: state.uiVisible.filter((t) => t !== todo),
+		uiVisible: state.uiVisible.filter(t => t !== todo),
 	}),
 });

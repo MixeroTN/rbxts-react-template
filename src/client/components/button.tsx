@@ -69,7 +69,7 @@ export function Button({
 				AutoButtonColor={false}
 				BackgroundColor3={buttonColor}
 				Size={new UDim2(1, 0, 1, 0)}
-				Position={buttonPosition.map((y) => new UDim2(0, 0, 0, y))}
+				Position={buttonPosition.map(y => new UDim2(0, 0, 0, y))}
 				Event={{
 					Activated: onClick,
 					MouseEnter: () => setHovered(true),

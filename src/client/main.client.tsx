@@ -25,7 +25,7 @@ const initialize = () => {
 	const controllers = promiseChild(TSFolder, "controllers").expect() as Folder;
 
 	const _render = () =>
-		Promise.defer<void>((_resolve) => {
+		Promise.defer<void>(_resolve => {
 			const root = createRoot(new Instance("Folder"));
 			const target = PlayerGui;
 
@@ -35,7 +35,7 @@ const initialize = () => {
 		});
 
 	const _start = () =>
-		Promise.defer<void>((_resolve) => {
+		Promise.defer<void>(_resolve => {
 			for (const controller of controllers.GetDescendants()) {
 				if (!controller.IsA("ModuleScript")) continue;
 
@@ -63,11 +63,11 @@ const initialize = () => {
 			const reloader = new HotReloader();
 			reloader.scan(
 				controllers,
-				(module) => {
+				module => {
 					require(module);
 					print("Reloading module", module.Name);
 				},
-				(module) => {},
+				module => {},
 			);
 		});
 };

@@ -14,7 +14,7 @@ export function useMotion<T extends MotionGoal>(initialValue: T) {
 
 	const [binding, setValue] = useBinding(initialValue);
 
-	useEventListener(RunService.Heartbeat, (delta) => {
+	useEventListener(RunService.Heartbeat, delta => {
 		const value = motion.step(delta);
 
 		if (value !== binding.getValue()) {

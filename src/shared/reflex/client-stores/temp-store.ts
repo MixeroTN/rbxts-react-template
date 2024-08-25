@@ -16,6 +16,6 @@ export const tempStore = createProducer(defaultState, {
 
 	removeTodo: (state, todo: string) => ({
 		...state,
-		todos: state.todos.filter((t) => t !== todo),
+		todos: state.todos.filter(t => t !== todo),
 	}),
 });
