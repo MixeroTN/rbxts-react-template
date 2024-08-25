@@ -1,4 +1,4 @@
-import { Producer, ProducerMiddleware } from "@rbxts/reflex";
+import { ProducerMiddleware } from "@rbxts/reflex";
 import {
 	createServerProducer,
 	defaultServerProfileState,
@@ -7,7 +7,7 @@ import {
 } from "shared/reflex/server-store";
 import { remotes } from "shared/remotes";
 
-type StoredDatas = { [playerUID: number]: serverData };
+type StoredDatas = Record<number, serverData>;
 
 const storedDatas: StoredDatas = {};
 
@@ -31,21 +31,21 @@ const middleware: ProducerMiddleware = producer => {
 
 				nextAction(...args);
 			} else {
-				return producer.getState();
+				return state;
 			}
 		};
 	};
 };
 
 remotes.replicateActionS.connect((player, actionName, actionArgs) => {
-	const profile = getPlayerServerData(player).producer as ServerProducer;
+	const profile = getPlayerServerData(player).producer;
 
 	if (!actionName.find("secure").isEmpty()) {
 		return;
 	}
 
 	isActionReplicated = true;
-	(profile.getDispatchers() as { [key: string]: (...args: unknown[]) => unknown })[actionName](...actionArgs);
+	(profile.getDispatchers() as Record<string, (...args: Array<unknown>) => unknown>)[actionName](...actionArgs);
 });
 
 export class serverData {

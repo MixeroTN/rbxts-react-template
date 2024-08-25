@@ -25,7 +25,7 @@ export function readColor3(buffer: BitBuffer) {
 
 export function writeArray<T extends defined>(
 	buffer: BitBuffer,
-	array: readonly T[],
+	array: ReadonlyArray<T>,
 	write: (buffer: BitBuffer, value: T) => void,
 ) {
 	buffer.WriteUInt(16, array.size());
@@ -35,9 +35,9 @@ export function writeArray<T extends defined>(
 	}
 }
 
-export function readArray<T extends defined>(buffer: BitBuffer, read: (buffer: BitBuffer) => T): T[] {
+export function readArray<T extends defined>(buffer: BitBuffer, read: (buffer: BitBuffer) => T): Array<T> {
 	const size = buffer.ReadUInt(16);
-	const array: T[] = [];
+	const array: Array<T> = [];
 
 	for (const _ of $range(1, size)) {
 		array.push(read(buffer));

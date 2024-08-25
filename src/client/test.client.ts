@@ -1,9 +1,9 @@
-import { remotes } from "shared/remotes";
-import { clientSignals } from "./client-signals";
-import { ClientProducer, clientStore } from "shared/reflex/client-store";
-import { createServerProducer, ServerProducer, serverProfileState } from "shared/reflex/server-store";
-import { clientData } from "./components/client-data";
 import { ProducerMiddleware } from "@rbxts/reflex";
+import { clientStore } from "shared/reflex/client-store";
+import { createServerProducer, serverProfileState } from "shared/reflex/server-store";
+import { remotes } from "shared/remotes";
+
+import { clientData } from "./components/client-data";
 
 let isActionReplicated = false;
 
@@ -19,14 +19,14 @@ const middleware: ProducerMiddleware = producer => {
 				} else {
 					if (!name.find("secure").isEmpty()) {
 						warn("[REFLEX-CLIENT] Odrzucono akcje z powodu na uzycie secure jako client");
-						return producer.getState();
+						return state;
 					} else {
 						remotes.replicateActionS.fire(name, args);
 						nextAction(...args);
 					}
 				}
 			} else {
-				return producer.getState();
+				return state;
 			}
 		};
 	};
@@ -38,14 +38,14 @@ remotes.replicateAction.connect((actionName, actionArgs) => {
 	}
 
 	isActionReplicated = true;
-	(clientData.serverProducer?.getDispatchers() as { [key: string]: (...args: unknown[]) => unknown })[actionName](
+	(clientData.serverProducer?.getDispatchers() as Record<string, (...args: Array<unknown>) => unknown>)[actionName](
 		...actionArgs,
 	);
 	print(clientData.serverProducer?.getState());
 });
 
 remotes.createClientData.connect(initData => {
-	clientData["clientProducer"] = clientStore;
-	clientData["serverProducer"] = createServerProducer(initData);
-	clientData["serverProducer"].applyMiddleware(middleware);
+	clientData.clientProducer = clientStore;
+	clientData.serverProducer = createServerProducer(initData);
+	clientData.serverProducer.applyMiddleware(middleware);
 });

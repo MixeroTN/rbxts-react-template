@@ -1,6 +1,7 @@
 import { Players } from "@rbxts/services";
-import { serverData } from "./components/server-data";
 import { remotes } from "shared/remotes";
+
+import { serverData } from "./components/server-data";
 
 Players.PlayerAdded.Connect(player => {
 	const dataContainer = new serverData(player);

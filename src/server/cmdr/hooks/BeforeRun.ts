@@ -1,18 +1,18 @@
-import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
 import type { CommandContext, Registry } from "@rbxts/cmdr";
+import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
 
 // https://eryn.io/Cmdr/guide/Hooks.html
 // At least one BeforeRun hook is required to make commands work in the live game
 // To disable this, comment "RegisterHooksIn" line in cmdr server script
 
-const TIMEOUT: number = 30;
+const TIMEOUT = 30;
 
 interface CacheEntry {
 	rank: number;
 	timestamp: number;
 }
 
-const cache: Map<number, CacheEntry> = new Map();
+const cache = new Map<number, CacheEntry>();
 
 function checkRank(player: Player): number {
 	const rank: number = player.GetRankInGroup(GROUP_ID);

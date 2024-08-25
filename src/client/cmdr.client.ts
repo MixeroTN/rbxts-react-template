@@ -1,5 +1,5 @@
-import { Players } from "@rbxts/services";
 import { CmdrClient } from "@rbxts/cmdr";
+import { Players } from "@rbxts/services";
 import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
 
 const ACTIVATION_KEYS: [Enum.KeyCode] = [Enum.KeyCode.F2];

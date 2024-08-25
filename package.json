@@ -13,7 +13,8 @@
 		"build": "rbxtsc",
 		"build:dev": "rm -rf out && npm run build && rojo build --output place.rbxlx",
 		"build:prod": "rm -rf out && cross-env NODE_ENV=production npm run build && rojo build --output place.rbxlx",
-		"eslint": "eslint \"src/**/*.ts\" --max-warnings 0",
+		"eslint": "eslint --max-warnings 0",
+		"eslint-fix": "eslint --max-warnings 0 --fix",
 		"watch": "rbxtsc -w",
 		"serve": "rojo serve"
 	},

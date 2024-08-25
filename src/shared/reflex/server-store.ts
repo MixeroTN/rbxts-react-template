@@ -1,7 +1,7 @@
-import { createProducer, Producer } from "@rbxts/reflex";
+import { createProducer } from "@rbxts/reflex";
 
 export interface serverProfileState {
-	readonly uiVisible: readonly string[];
+	readonly uiVisible: ReadonlyArray<string>;
 	readonly player?: Player;
 }
 

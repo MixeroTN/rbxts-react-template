@@ -48,7 +48,7 @@ export function mapProperty<T extends object, K extends keyof T>(
 /**
  * Creates a new array of values given a length and a mapper function.
  */
-export function fillArray<T extends defined>(length: number, mapper: (index: number) => T): T[] {
+export function fillArray<T extends defined>(length: number, mapper: (index: number) => T): Array<T> {
 	return new Array(length, 0).map((_, index) => mapper(index));
 }
 
@@ -69,7 +69,7 @@ export function assign<K extends string, V>(object: { [key in K]: V }, patch: { 
 /**
  * Returns a shuffled copy of the given array.
  */
-export function shuffle<T extends defined>(array: T[]): T[] {
+export function shuffle<T extends defined>(array: Array<T>): Array<T> {
 	const result = table.clone(array);
 	const random = new Random();
 

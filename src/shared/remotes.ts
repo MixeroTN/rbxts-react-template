@@ -1,10 +1,9 @@
-import { BroadcastAction } from "@rbxts/reflex";
-import { Client, createRemotes, namespace, remote, Server, throttleMiddleware } from "@rbxts/remo";
-import { t } from "@rbxts/t";
+import { Client, createRemotes, remote, Server } from "@rbxts/remo";
+
 import { serverProfileState } from "./reflex/server-store";
 
 export const remotes = createRemotes({
-	replicateAction: remote<Client, [actionName: string, actionArgs: unknown[]]>(),
-	replicateActionS: remote<Server, [actionName: string, actionArgs: unknown[]]>(),
+	replicateAction: remote<Client, [actionName: string, actionArgs: Array<unknown>]>(),
+	replicateActionS: remote<Server, [actionName: string, actionArgs: Array<unknown>]>(),
 	createClientData: remote<Client, [loadedState: serverProfileState]>(),
 });

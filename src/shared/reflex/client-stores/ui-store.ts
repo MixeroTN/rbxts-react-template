@@ -1,7 +1,7 @@
 import { createProducer } from "@rbxts/reflex";
 
 interface tempStore {
-	readonly uiVisible: readonly string[];
+	readonly uiVisible: ReadonlyArray<string>;
 }
 
 const defaultState: tempStore = {
