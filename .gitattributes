@@ -1,9 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Linguist overrides
-.eslintrc linguist-language=JSON
-.luarc linguist-language=JSON
-.prettierrc linguist-language=JSON
+# Linguist overrides for previews on GitHub
+.eslintrc linguist-language=jsonc
+.luarc linguist-language=jsonc
+.prettierrc linguist-language=jsonc
 .yarnrc linguist-language=sh
 wally.lock linguist-language=TOML
