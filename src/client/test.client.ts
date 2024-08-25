@@ -45,7 +45,6 @@ remotes.replicateAction.connect((actionName, actionArgs) => {
 })
 
 remotes.createClientData.connect((initData) => {
-    print("CREATED DATA ON CLIENT")
     clientData["clientProducer"] = clientStore
     clientData["serverProducer"] = createServerProducer(initData)
     clientData["serverProducer"].applyMiddleware(middleware)

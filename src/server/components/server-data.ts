@@ -34,9 +34,6 @@ const middleware: ProducerMiddleware = (producer) => {
 }
 
 remotes.replicateActionS.connect((player, actionName, actionArgs) => {
-
-    print("EJ TO PRZYCHODZI?")
-
     const profile = getPlayerServerData(player).producer as ServerProducer
 
     if (!actionName.find("secure").isEmpty()) {
@@ -45,7 +42,6 @@ remotes.replicateActionS.connect((player, actionName, actionArgs) => {
 
     isActionReplicated = true;
     (profile.getDispatchers() as  { [key: string]: (...args: unknown[]) => unknown})[actionName](...actionArgs)
-    print(profile.getState())
 })
 
 export class serverData {
