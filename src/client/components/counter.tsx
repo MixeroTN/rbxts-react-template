@@ -19,7 +19,7 @@ export function Counter() {
 			onClick={() => {
 				setCount(count + 1);
 				setColorIndex((colorIndex + 1) % COLORS.size());
-				clientData.serverProducer?.removeUIVisible("essa xddddddddddddd")
+				clientData.serverProducer?.removeUIVisible("essa xddddddddddddd");
 			}}
 			font={fonts.inter.medium}
 			text={`👆 Clicked ${count} times`}

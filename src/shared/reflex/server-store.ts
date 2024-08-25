@@ -1,32 +1,31 @@
 import { createProducer, Producer } from "@rbxts/reflex";
 
 export interface serverProfileState {
-    readonly uiVisible: readonly string[];
-    readonly player?: Player;
+	readonly uiVisible: readonly string[];
+	readonly player?: Player;
 }
 
 export const defaultServerProfileState: serverProfileState = {
-    uiVisible: []
-}
+	uiVisible: [],
+};
 
-export type ServerProducer = ReturnType<typeof createServerProducer>
+export type ServerProducer = ReturnType<typeof createServerProducer>;
 
 export const createServerProducer = (defaultState: serverProfileState) => {
-    return createProducer(defaultState, {
+	return createProducer(defaultState, {
+		setPlayer: (state, player: Player) => ({
+			...state,
+			player: player,
+		}),
 
-        setPlayer: (state, player: Player) => ({
-            ...state,
-            player: player,
-        }),
+		addUIVisible: (state, todo: string) => ({
+			...state,
+			uiVisible: [...state.uiVisible, todo],
+		}),
 
-        addUIVisible: (state, todo: string) => ({
-            ...state,
-            uiVisible: [...state.uiVisible, todo],
-        }),
-
-        removeUIVisible: (state, todo: string) => ({
-            ...state,
-            uiVisible: state.uiVisible.filter((t) => t !== todo),
-        }),
-    })
-}
+		removeUIVisible: (state, todo: string) => ({
+			...state,
+			uiVisible: state.uiVisible.filter((t) => t !== todo),
+		}),
+	});
+};

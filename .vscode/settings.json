@@ -1,18 +1,32 @@
 {
-	"editor.formatOnSave": true,
-  	"editor.formatOnPaste": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
 	"explorer.compactFolders": false,
-	"typescript.tsdk": "node_modules/typescript/lib",
 	"files.eol": "\n",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.quoteStyle": "double",
+	"[markdown]": {
+		"editor.formatOnSave": true,
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 120
+	},
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 		"editor.formatOnSave": true
 	},
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 		//"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": true
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml",
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2,
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 120
 	},
 	"eslint.run": "onType",
 	"eslint.format.enable": true,

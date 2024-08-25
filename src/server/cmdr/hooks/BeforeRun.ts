@@ -1,5 +1,5 @@
-import { CommandContext, Registry } from "@rbxts/cmdr";
 import { ADMIN_RANK, GROUP_ID } from "shared/configs/core";
+import type { CommandContext, Registry } from "@rbxts/cmdr";
 
 // https://eryn.io/Cmdr/guide/Hooks.html
 // At least one BeforeRun hook is required to make commands work in the live game

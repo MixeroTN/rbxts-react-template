@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default [{
-    ignores: ["out", "types"],
+    ignores: ["out", "types", "migration"],
 }, ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
@@ -56,5 +56,10 @@ export default [{
         "simple-import-sort/exports": "warn",
         "simple-import-sort/imports": "warn",
         "unused-imports/no-unused-imports": "warn",
+
+        "no-unused-vars": ["warn", {
+            varsIgnorePattern: "^_",
+            argsIgnorePattern: "^_",
+        }],
     },
 }];

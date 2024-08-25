@@ -1,19 +1,60 @@
 {
-    "React App": {
-        "prefix": ["app", "reactapp", "roactapp"],
-        "description": "Create a React app",
-        "body": [
-          "import React from \"@rbxts/react\";",
-          "",
-          "interface Props {",
-          "",
-          "}",
-          "",
-          "export default function ${1:${TM_FILENAME_BASE/(^|-)([a-zA-Z0-9])/${2:/capitalize}/g}}(props: Props) {",
-          "\treturn (",
-          "\t\t<$0",
-          "\t);",
-          "}"
-          ]
-      }
+	"React App": {
+		"prefix": ["app", "reactapp", "roactapp"],
+		"description": "Create a React app",
+		"body": [
+			"import React from \"@rbxts/react\";",
+			"",
+			"interface Props {",
+			"",
+			"}",
+			"",
+			"export default function ${1:${TM_FILENAME_BASE/(^|-)([a-zA-Z0-9])/${2:/capitalize}/g}}(props: Props) {",
+			"\treturn (",
+			"\t\t<$0",
+			"\t);",
+			"}",
+		],
+	},
+	"Functional Component": {
+		"prefix": "refc",
+		"description": "Create a Functional Component",
+		"body": [
+			"//!native",
+			"//!optimize 2",
+			"",
+			"import React from \"@rbxts/react\";",
+			"",
+			"export const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}: React.FunctionComponent = () => {",
+			"\treturn <></>;",
+			"};",
+			"",
+			"export default React.memo(${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g});",
+			"",
+		],
+
+		"scope": "typescriptreact",
+	},
+
+	"Functional Component with Props": {
+		"prefix": "refcp",
+		"description": "Create a Functional Component with Props",
+		"body": [
+			"//!native",
+			"//!optimize 2",
+			"",
+			"import React from \"@rbxts/react\";",
+			"",
+			"export interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}Properties {}",
+			"",
+			"export const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}: React.FunctionComponent<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}Properties> = (properties) => {",
+			"\treturn <></>;",
+			"};",
+			"",
+			"export default React.memo(${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g});",
+			"",
+		],
+
+		"scope": "typescriptreact",
+	},
 }
