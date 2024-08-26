@@ -1,6 +1,6 @@
 import { useEventListener } from "@rbxts/pretty-react-hooks";
-import { Binding, useBinding, useMemo } from "@rbxts/react";
-import { createMotion, Motion, MotionGoal } from "@rbxts/ripple";
+import { type Binding, useBinding, useMemo } from "@rbxts/react";
+import { createMotion, type Motion, type MotionGoal } from "@rbxts/ripple";
 import { RunService } from "@rbxts/services";
 
 export function useMotion(_initialValue: number): LuaTuple<[Binding<number>, Motion]>;

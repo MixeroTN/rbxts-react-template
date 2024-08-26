@@ -1,7 +1,7 @@
 import React, { useState } from "@rbxts/react";
+import { fonts } from "client/constants/fonts";
+import { palette } from "client/constants/palette";
 import { usePx } from "client/hooks/use-px";
-import { fonts } from "client/utils/fonts";
-import { palette } from "client/utils/palette";
 
 import { Button } from "./button";
 import { clientData } from "./client-data";

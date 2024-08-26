@@ -1,4 +1,4 @@
-import BitBuffer from "@rbxts/bitbuffer2";
+import type BitBuffer from "@rbxts/bitbuffer2";
 
 export function writeVector2(buffer: BitBuffer, vector: Vector2) {
 	buffer.WriteFloat32(vector.X);

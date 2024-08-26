@@ -1,6 +1,6 @@
-import { Client, createRemotes, remote, Server } from "@rbxts/remo";
+import { type Client, createRemotes, remote, type Server } from "@rbxts/remo";
 
-import { serverProfileState } from "./reflex/server-store";
+import type { serverProfileState } from "./reflex/server-store";
 
 export const remotes = createRemotes({
 	replicateAction: remote<Client, [actionName: string, actionArgs: Array<unknown>]>(),

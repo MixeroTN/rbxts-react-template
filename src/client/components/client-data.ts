@@ -1,5 +1,5 @@
-import { ClientProducer } from "shared/reflex/client-store";
-import { ServerProducer } from "shared/reflex/server-store";
+import type { ClientProducer } from "shared/reflex/client-store";
+import type { ServerProducer } from "shared/reflex/server-store";
 
 export interface StoredDataOnClient {
 	clientProducer?: ClientProducer;

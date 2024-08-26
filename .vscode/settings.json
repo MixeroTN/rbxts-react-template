@@ -54,6 +54,8 @@
 		"setmemorycategory",
 		"setmetatable",
 		"testez",
-		"tsbuildinfo"
+		"textbutton",
+		"tsbuildinfo",
+		"uicorner"
 	]
 }

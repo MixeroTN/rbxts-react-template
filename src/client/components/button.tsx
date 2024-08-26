@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "@rbxts/react";
+import { fonts } from "client/constants/fonts";
+import { palette } from "client/constants/palette";
+import { springs } from "client/constants/springs";
 import { useMotion } from "client/hooks/use-motion";
 import { usePx } from "client/hooks/use-px";
 import { brighten } from "client/utils/color-utils";
-import { fonts } from "client/utils/fonts";
-import { palette } from "client/utils/palette";
-import { springs } from "client/utils/springs";
 
 interface ButtonProps {
 	onClick?: () => void;
@@ -41,21 +41,21 @@ export function Button({
 
 	useEffect(() => {
 		if (pressed) {
-			buttonPositionMotion.spring(px(8), springs.responsive);
-			buttonColorMotion.spring(brighten(backgroundColor, -0.1), springs.responsive);
+			buttonPositionMotion.spring(px(8), springs.responsive2);
+			buttonColorMotion.spring(brighten(backgroundColor, -0.1), springs.responsive2);
 		} else if (hovered) {
-			buttonPositionMotion.spring(-px(8), springs.responsive);
-			buttonColorMotion.spring(brighten(backgroundColor, 0.1), springs.responsive);
+			buttonPositionMotion.spring(-px(8), springs.responsive2);
+			buttonColorMotion.spring(brighten(backgroundColor, 0.1), springs.responsive2);
 		} else {
-			buttonPositionMotion.spring(0, springs.responsive);
-			buttonColorMotion.spring(backgroundColor, springs.responsive);
+			buttonPositionMotion.spring(0, springs.responsive2);
+			buttonColorMotion.spring(backgroundColor, springs.responsive2);
 		}
 	}, [pressed, hovered, backgroundColor, px]);
 
 	useEffect(() => {
 		if (!pressed && hovered) {
 			buttonPositionMotion.impulse(-px(1));
-			buttonPositionMotion.spring(-px(8), springs.bubbly);
+			buttonPositionMotion.spring(-px(8), springs.bubbly2);
 		}
 	}, [pressed]);
 

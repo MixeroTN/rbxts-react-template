@@ -37,6 +37,12 @@
 				"readonly": "generic"
 			}
 		],
+		"@typescript-eslint/consistent-type-imports": [
+			"warn",
+			{
+				"fixStyle": "inline-type-imports"
+			}
+		],
 		"@typescript-eslint/no-floating-promises": [
 			"error",
 			{

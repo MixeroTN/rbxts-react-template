@@ -1,6 +1,6 @@
-import { ProducerMiddleware } from "@rbxts/reflex";
+import type { ProducerMiddleware } from "@rbxts/reflex";
 import { clientStore } from "shared/reflex/client-store";
-import { createServerProducer, serverProfileState } from "shared/reflex/server-store";
+import { createServerProducer, type serverProfileState } from "shared/reflex/server-store";
 import { remotes } from "shared/remotes";
 
 import { clientData } from "./components/client-data";

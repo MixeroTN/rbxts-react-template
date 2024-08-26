@@ -1,4 +1,4 @@
-import { CommandDefinition } from "@rbxts/cmdr";
+import type { CommandDefinition } from "@rbxts/cmdr";
 
 export = {
 	Name: "debug",

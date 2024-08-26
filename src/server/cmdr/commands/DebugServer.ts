@@ -1,5 +1,5 @@
 //import { TestService } from "@rbxts/services";
-import { CommandContext } from "@rbxts/cmdr";
+import type { CommandContext } from "@rbxts/cmdr";
 
 const DEFAULT_MESSAGE = "Test message is here";
 
