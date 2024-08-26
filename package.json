@@ -75,6 +75,7 @@
 		"@rbxts/rewire": "^0.3.0",
 		"@rbxts/ripple": "^0.9.0",
 		"@rbxts/rust-classes": "^0.12.0",
+		"@rbxts/safebadges": "^1.0.2",
 		"@rbxts/services": "^1.5.4",
 		"@rbxts/set-timeout": "^1.1.2",
 		"@rbxts/signal": "^1.1.1",
