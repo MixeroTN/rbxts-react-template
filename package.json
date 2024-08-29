@@ -81,6 +81,7 @@
 		"@rbxts/signal": "^1.1.1",
 		"@rbxts/spring": "^1.0.2",
 		"@rbxts/t": "^3.1.1",
+		"@rbxts/tableutil2": "^1.0.2",
 		"@rbxts/testez": "^0.4.2-ts.0",
 		"@rbxts/tween": "^1.0.5",
 		"@rbxts/validate-tree": "^2.0.2",
