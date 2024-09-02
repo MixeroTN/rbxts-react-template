@@ -48,7 +48,8 @@ const initialize = () => {
 				},
 				_module => {},
 			);
-		});
+		})
+		.catch(warn);
 };
 
 initialize();
